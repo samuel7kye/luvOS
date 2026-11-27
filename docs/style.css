@@ -232,9 +232,9 @@ section[id] { scroll-margin-top: 20px; }
 .game-spine span { writing-mode: vertical-rl; rotate: 180deg; font: 700 .91rem/1 var(--font); letter-spacing: -.04em; }
 .game-spine small { color: #ffd4ee; font: 700 .53rem/1 var(--font); white-space: nowrap; }
 .game-cover .photo-expand { z-index: 2; }
-.polaroid-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; width: min(100%, 350px); }
-.polaroid-pair .polaroid { width: 100%; }
-.polaroid-pair .polaroid:nth-child(2) { --cover-rotate: 4deg; }
+.polaroid-pair { display: grid; width: min(100%, 350px); transform: rotate(-2deg); }
+.polaroid-pair .polaroid { grid-area: 1 / 1; width: 62.5%; transform: none; }
+.polaroid-pair .polaroid:nth-child(2) { justify-self: end; z-index: 1; }
 .polaroid-pair .cover-image { aspect-ratio: 2 / 3; }
 .chapter-together .game-cover { transform: rotate(2deg); }
 .chapter-together .game-cover .cover-image { aspect-ratio: 1.12; }
