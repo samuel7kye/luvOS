@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Um álbum de um ano de namoro, feito para você.">
+  <meta name="theme-color" content="#fbe2ed">
+  <meta name="robots" content="noindex, nofollow">
+  <title>luvOS 1.0</title>
+  <link rel="icon" type="image/svg+xml" href="assets/heart.svg">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="historia.js"></script>
+  <script defer src="album.js"></script>
+  <script defer src="dvd.js"></script>
+</head>
+<body id="topo">
+  <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 21 3.7 13a5.5 5.5 0 0 1 7.8-7.8l.5.5.5-.5a5.5 5.5 0 0 1 7.8 7.8Z"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20.7 14.1A8.9 8.9 0 0 1 9.9 3.3a9 9 0 1 0 10.8 10.8Z"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M12 4v15m-6-6 6 6 6-6"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4.5v15l13-7.5z"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><path d="M6 4.5h4v15H6zm8 0h4v15h-4z"/></symbol>
+    <symbol id="i-prev" viewBox="0 0 24 24"><path d="M4 5h2.5v14H4zm15 0L8 12l11 7z"/></symbol>
+    <symbol id="i-next" viewBox="0 0 24 24"><path d="M17.5 5H20v14h-2.5zM5 5l11 7-11 7z"/></symbol>
+    <symbol id="i-expand" viewBox="0 0 24 24"><path d="M13 5h6v6M19 5l-6 6m-2 8H5v-6m0 6 6-6"/></symbol>
+    <symbol id="i-star" viewBox="0 0 100 100"><path d="m50 3 6.2 33.5L80 20l-16.5 23.8L97 50l-33.5 6.2L80 80 56.2 63.5 50 97l-6.2-33.5L20 80l16.5-23.8L3 50l33.5-6.2L20 20l23.8 16.5Z"/></symbol>
+  </svg>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <div class="site-window">
+    <div class="site-browser" aria-hidden="true">
+      <div class="window-bar site-browser-bar">
+        <span><svg class="icon"><use href="#i-heart"/></svg> luvOS 1.0</span>
+        <div class="window-controls"><i>−</i><i>□</i><i>×</i></div>
+      </div>
+      <div class="site-address">
+        <span>Endereço</span>
+        <span class="site-address-field"><svg class="icon"><use href="#i-heart"/></svg><span>luvos.exe/1.0</span></span>
+      </div>
+    </div>
+    <header class="site-header shell">
+      <a class="wordmark" href="#topo"><span class="brand-icon"><svg class="icon"><use href="#i-heart"/></svg></span><span>luvOS 1.0<small>.exe</small></span></a>
+      <nav class="main-nav" aria-label="Navegação principal">
+        <a class="nav-home" href="#topo">Início</a><a href="#contador">Contador</a><a href="#capitulos">Capítulos</a>
+      </nav>
+      <button class="theme-toggle" type="button" aria-label="Ativar o modo escuro" aria-pressed="false">
+        <svg class="icon"><use href="#i-moon"/></svg><span>Modo escuro</span>
+      </button>
+    </header>
+
+    <main class="shell" id="conteudo">
+      <section class="hero window" aria-labelledby="hero-title">
+        <div class="window-bar">
+          <span><svg class="icon"><use href="#i-heart"/></svg> luvOS 1.0</span>
+          <div class="window-controls" aria-hidden="true"><i>−</i><i>□</i><i>×</i></div>
+        </div>
+        <div class="hero-body">
+          <div class="hero-copy">
+            <p class="stamp hero-stamp"><span aria-hidden="true">✦</span> 07.12.2025 <span aria-hidden="true">/</span> 07.12.2026</p>
+            <h1 id="hero-title">A gente,<br><em>de novo.</em></h1>
+            <a class="button primary" href="#capitulos">Ver capítulos <svg class="icon"><use href="#i-arrow"/></svg></a>
+          </div>
+          <div class="hero-art" aria-hidden="true">
+            <div class="art-shadow"></div>
+            <div class="hero-print hero-print-back">
+              <img src="images/IMG_2941.jpg" alt="">
+            </div>
+            <div class="hero-print hero-print-front">
+              <span class="photo-tape"></span>
+              <img src="images/IMG_3905.jpg" alt="" fetchpriority="high">
+            </div>
+            <div class="mini-disc"></div>
+            <div class="pixel-heart"></div>
+            <svg class="art-star art-star-top"><use href="#i-star"/></svg>
+            <svg class="art-star art-star-bottom"><use href="#i-star"/></svg>
+            <svg class="art-star art-star-right"><use href="#i-star"/></svg>
+          </div>
+          <div class="loose-photo loose-in-hero" data-loose-photo></div>
+        </div>
+      </section>
+
+      <section class="timer-section" id="contador" aria-labelledby="timer-title">
+        <div class="loose-photo loose-at-hero" data-loose-photo></div>
+        <div class="section-heading">
+          <p class="kicker">DESDE 07.12.2025</p>
+          <h2 id="timer-title">Nosso <em>tempo.</em></h2>
+        </div>
+        <div class="timer-window window">
+          <div class="window-bar">
+            <span><svg class="icon"><use href="#i-heart"/></svg> contador.exe</span>
+            <span class="active-status"><i></i> AO VIVO</span>
+          </div>
+          <div class="timer-grid" role="timer" aria-label="Tempo de namoro">
+            <div><strong data-time="days">–––</strong><span>DIAS</span></div>
+            <div><strong data-time="hours">––</strong><span>HORAS</span></div>
+            <div><strong data-time="minutes">––</strong><span>MINUTOS</span></div>
+            <div><strong data-time="seconds">––</strong><span>SEGUNDOS</span></div>
+          </div>
+        </div>
+        <div class="loose-photo loose-at-timer" data-loose-photo></div>
+      </section>
+
+      <section class="chapters-section" id="capitulos" aria-labelledby="chapters-title">
+        <div class="section-heading chapters-heading">
+          <h2 id="chapters-title">Os <em>capítulos.</em></h2>
+          <div class="loose-photo loose-at-chapters" data-loose-photo></div>
+        </div>
+        <ol class="chapters" id="chapter-list"></ol>
+        <noscript>Ative o JavaScript para ver os capítulos e o contador.</noscript>
+      </section>
+
+      <div class="letter-area">
+        <div class="loose-photo loose-at-letter" data-loose-photo></div>
+        <section class="letter window" aria-labelledby="letter-title">
+          <div class="window-bar"><span><svg class="icon"><use href="#i-heart"/></svg> pra_você.txt</span><span aria-hidden="true">♡</span></div>
+          <div class="letter-body">
+            <p class="kicker">07.12.2026</p>
+            <h2 id="letter-title">Feliz um ano, <em>meu amor.</em></h2>
+          </div>
+        </section>
+        <div class="loose-photo loose-at-footer" data-loose-photo></div>
+      </div>
+    </main>
+
+    <footer class="site-footer shell">
+      <a class="wordmark" href="#topo"><span class="brand-icon"><svg class="icon"><use href="#i-heart"/></svg></span><span>luvOS 1.0<small>.exe</small></span></a>
+      <a class="back-top" href="#topo">Voltar ao topo ↑</a>
+    </footer>
+  </div>
+
+  <aside class="dvd-player" aria-label="Player de música">
+    <audio id="dvd-audio" preload="none" hidden></audio>
+    <div class="dvd-face">
+      <button class="dvd-expander" id="dvd-expand" type="button" aria-controls="dvd-panel" aria-expanded="false" aria-label="Expandir player" title="Expandir player">
+        <span class="dvd-mark" aria-hidden="true"><b>DVD</b><i></i></span>
+        <span class="dvd-chevron" aria-hidden="true"></span>
+      </button>
+      <div class="dvd-display">
+        <strong id="dvd-track" aria-live="polite">Trilha sonora</strong>
+        <div class="dvd-readout">
+          <span id="dvd-state">SEM DISCO</span>
+          <span id="dvd-clock" aria-label="Tempo decorrido">0:00</span>
+        </div>
+      </div>
+    </div>
+    <div class="dvd-transport" role="group" aria-label="Controles de reprodução">
+      <button id="dvd-prev" type="button" aria-label="Faixa anterior" title="Faixa anterior" disabled>
+        <svg class="icon" aria-hidden="true"><use href="#i-prev"/></svg>
+      </button>
+      <button id="dvd-play" type="button" aria-label="Tocar" title="Tocar">
+        <svg class="icon" aria-hidden="true"><use href="#i-play"/></svg>
+      </button>
+      <button id="dvd-next" type="button" aria-label="Próxima faixa" title="Próxima faixa" disabled>
+        <svg class="icon" aria-hidden="true"><use href="#i-next"/></svg>
+      </button>
+    </div>
+    <div class="dvd-panel" id="dvd-panel" hidden>
+      <label class="dvd-field">Faixa
+        <select id="dvd-queue" disabled><option value="">Sem músicas</option></select>
+      </label>
+      <label class="dvd-field">Posição
+        <input id="dvd-position" type="range" min="0" max="1" value="0" step="1" disabled>
+      </label>
+      <label class="dvd-field">Volume
+        <input id="dvd-volume" type="range" min="0" max="100" value="75">
+      </label>
+      <p id="dvd-notice" class="dvd-notice" role="status">Escolha arquivos de áudio para ouvir aqui.</p>
+      <div class="dvd-tools">
+        <button id="dvd-import" type="button">Escolher músicas</button>
+        <input id="dvd-files" type="file" accept="audio/*,.mp3,.m4a,.ogg,.opus,.wav,.flac" multiple hidden>
+        <a id="dvd-reference" href="https://open.spotify.com/playlist/3eCvhlDZNJkSNMQokvQeMY" target="_blank" rel="noopener noreferrer">Playlist de referência ↗</a>
+      </div>
+    </div>
+  </aside>
+
+  <dialog class="dialog photo-dialog window" id="photo-dialog" aria-labelledby="photo-title">
+    <div class="window-bar">
+      <span id="photo-title"></span>
+      <button class="close-button" type="button" data-close aria-label="Fechar álbum">×</button>
+    </div>
+    <div class="photo-stage"><img id="album-photo" alt=""></div>
+    <div class="photo-controls">
+      <button id="photo-prev" type="button" aria-label="Foto anterior">←</button>
+      <p id="photo-caption" aria-live="polite"></p>
+      <button id="photo-next" type="button" aria-label="Próxima foto">→</button>
+    </div>
+  </dialog>
+</body>
+</html>
