@@ -75,7 +75,7 @@ photoDialog.addEventListener('keydown', (event) => {
 // O conteúdo é editado em historia.js. Os textos entram no DOM como texto simples.
 const chapterList = document.querySelector('#chapter-list')
 historia.capitulos.forEach((chapter) => {
-  const isGame = chapter.estilo === 'return' || chapter.estilo === 'together'
+  const isGame = chapter.estilo === 'together'
   const card = document.createElement('li')
   card.className = 'chapter chapter-' + chapter.estilo
   card.innerHTML = `
@@ -111,7 +111,21 @@ historia.capitulos.forEach((chapter) => {
         <small>△ ○ × □</small>
       </span>`)
   }
-  button.addEventListener('click', () => openAlbum(chapter.titulo, chapter.fotos.map((arquivo) => ({ arquivo }))))
+  const photos = chapter.fotos.map((arquivo) => ({ arquivo }))
+  if (chapter.estilo === 'pregnancy') {
+    const pair = document.createElement('div')
+    pair.className = 'polaroid-pair'
+    button.replaceWith(pair)
+    photos.forEach((photo, index) => {
+      const print = button.cloneNode(true)
+      print.querySelector('img').src = imagePath(photo.arquivo)
+      print.setAttribute('aria-label', 'Ampliar foto ' + (index + 1) + ' da gravidez')
+      print.addEventListener('click', () => openAlbum(chapter.titulo, photos, index))
+      pair.append(print)
+    })
+  } else {
+    button.addEventListener('click', () => openAlbum(chapter.titulo, photos))
+  }
   chapterList.append(card)
 })
 

@@ -204,7 +204,7 @@ section[id] { scroll-margin-top: 20px; }
 .chapters { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
 .chapter { --card: #ffebf2; --card-ink: #36285d; --card-accent: #9b245e; --photo-position: center 38%; --cover-rotate: -4deg; border: 1px solid var(--line); border-radius: 9px; background: var(--card); color: var(--card-ink); min-width: 0; box-shadow: 3px 4px 0 var(--shadow); }
 .chapter-crush { --card: #ffe0ef; --cover-rotate: 4deg; --photo-position: center; }
-.chapter-return, .chapter-together { --card: #2b2039; --card-ink: #ffedf9; --card-accent: #ff9acf; --photo-position: center 31%; }
+.chapter-pregnancy, .chapter-together { --card: #2b2039; --card-ink: #ffedf9; --card-accent: #ff9acf; --photo-position: center 31%; }
 .chapter-together { --card: #521c42; --photo-position: center 37%; }
 [data-theme="dark"] .chapter-first { --card: #372640; --card-ink: #ffeeff; --card-accent: #ffa9d8; }
 [data-theme="dark"] .chapter-crush { --card: #482640; --card-ink: #ffeeff; --card-accent: #ffa9d8; }
@@ -232,8 +232,10 @@ section[id] { scroll-margin-top: 20px; }
 .game-spine span { writing-mode: vertical-rl; rotate: 180deg; font: 700 .91rem/1 var(--font); letter-spacing: -.04em; }
 .game-spine small { color: #ffd4ee; font: 700 .53rem/1 var(--font); white-space: nowrap; }
 .game-cover .photo-expand { z-index: 2; }
-.chapter-return .cover-image img { object-fit: contain; }
-.chapter-return .game-cover { transform: rotate(-2deg); }
+.polaroid-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; width: min(100%, 350px); }
+.polaroid-pair .polaroid { width: 100%; }
+.polaroid-pair .polaroid:nth-child(2) { --cover-rotate: 4deg; }
+.polaroid-pair .cover-image { aspect-ratio: 2 / 3; }
 .chapter-together .game-cover { transform: rotate(2deg); }
 .chapter-together .game-cover .cover-image { aspect-ratio: 1.12; }
 

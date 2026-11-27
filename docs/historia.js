@@ -76,9 +76,8 @@ const historia = {
     {
       data: 'OUTUBRO DE 2026',
       titulo: 'Gravidez.',
-      legenda: 'FASE NOVA',
-      estilo: 'return',
-      fotos: ['gravidez-outubro-2026.jpg'],
+      estilo: 'pregnancy',
+      fotos: ['gravidez-outubro-2026.jpg', 'gravidez-outubro-2026-02.jpg'],
     },
     {
       data: 'AGORA',
