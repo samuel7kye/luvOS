@@ -1,6 +1,6 @@
-# A gente, de novo.
+# luvOS 1.0
 
-Abra `index.html` no navegador. O player DVD acompanha a navegação pelo álbum. Abra o painel do DVD para escolher músicas do seu computador.
+Abra `index.html` no navegador. O player DVD fica no centro da tela e acompanha a navegação pelo álbum. A bio no fim da página leva aos perfis de Samuel e Kailayni.
 As janelinhas mudam de posição a cada abertura do álbum. Arraste para reorganizar ou clique numa foto para ampliar.
 
 ## Ajustar o álbum
